@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+  ===========================================================================
+  PROJECT TEMPLATE  —  how to add a new project
+  ---------------------------------------------------------------------------
+  1. Copy this file and rename it, e.g.  projects/my-new-project.html
+     (lowercase, no spaces — use hyphens.)
+  2. Replace everything written in CAPS / between «» with your content.
+  3. Add a matching row to index.html (see README → "Add a project").
+  4. Drop images in  ../assets/img/  and files in  ../assets/files/.
+  Nothing to build or compile — just save and refresh.
+  ===========================================================================
+-->
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>«PROJECT NAME» — Federico Trucchia</title>
+  <meta name="description" content="«ONE-LINE DESCRIPTION OF THE PROJECT»">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <!-- ===== top bar (leave as-is) ===== -->
+  <header class="masthead"><div class="masthead__inner">
+    <div class="brand"><a class="brand__name" href="../index.html">Federico Trucchia</a>
+      <span class="brand__tag">Hardware Interaction Design</span></div>
+    <nav class="nav"><a href="../index.html#index">Index</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a></nav>
+  </div></header>
+
+  <main>
+    <!-- ===== project header ===== -->
+    <section class="proj-hero wrap">
+      <a class="backlink" href="../index.html">← Index</a>
+      <div class="label label--accent" style="margin-bottom:18px">Project «NN»</div>
+      <h1>«PROJECT NAME»</h1>
+      <p class="proj-hero__sub">«ONE OR TWO SENTENCES THAT FRAME THE PROJECT.»</p>
+
+      <!-- spec sheet: add or remove cells freely -->
+      <div class="spec">
+        <div class="spec__cell"><div class="spec__k">Place</div><div class="spec__v">«COMPANY / LAB»</div></div>
+        <div class="spec__cell"><div class="spec__k">Role</div><div class="spec__v">«YOUR ROLE»</div></div>
+        <div class="spec__cell"><div class="spec__k">Years</div><div class="spec__v">«YEAR–YEAR»</div></div>
+        <div class="spec__cell"><div class="spec__k">Focus</div><div class="spec__v">«WHAT YOU OWNED»</div></div>
+      </div>
+    </section>
+
+    <!-- ===== body ===== -->
+    <section class="proj-body"><div class="wrap">
+
+      <!-- A hero image. Replace the whole <figure> with a real <img>, e.g.:
+           <figure><img src="../assets/img/my-photo.jpg" alt="…"><figcaption>Caption</figcaption></figure> -->
+      <figure><div class="media-ph"><span>HERO IMAGE — replace this block with your photo</span></div>
+        <figcaption>placeholder — replace with your own image</figcaption></figure>
+
+      <!-- A text block. Duplicate this for each section of the story. -->
+      <div class="block reveal">
+        <span class="label block__label">«SECTION LABEL»</span>
+        <h2>«SECTION HEADING»</h2>
+        <p class="lead">«OPENING SENTENCE — slightly larger, sets the scene.»</p>
+        <p>«The story. What you did, how you did it, what broke, what you learned.»</p>
+      </div>
+
+      <!-- A YouTube video. Paste your video ID where shown (the part after v= in the URL). -->
+      <div class="block reveal">
+        <span class="label label--accent block__label">Video</span>
+        <h2>«VIDEO HEADING»</h2>
+        <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID"
+          title="«VIDEO TITLE»" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+
+      <!-- Downloadable files. Put files in ../assets/files/ and link them. -->
+      <div class="block reveal">
+        <span class="label label--accent block__label">Documents</span>
+        <h2>Files &amp; downloads</h2>
+        <div class="files">
+          <a class="file" href="../assets/files/YOUR-FILE.pdf" download>
+            <span class="file__ext">PDF</span><span>«FILE NAME»</span><span class="file__meta">download</span></a>
+        </div>
+      </div>
+
+    </div></section>
+  </main>
+
+  <footer class="wrap sitefoot"><span>Federico Trucchia — Portfolio</span>
+    <span>© <span data-year>2025</span> · Built on GitHub Pages</span></footer>
+  <script src="../main.js"></script>
+</body>
+</html>
