@@ -151,7 +151,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 0; }
 .index-table { width: 100%; }
 .index-row {
   display: grid;
-  grid-template-columns: 46px 1fr 1.1fr 0.9fr 88px 24px;
+  grid-template-columns: 46px minmax(0,1fr) 0.85fr 92px 26px;
   align-items: center;
   gap: 18px;
   padding: 20px 8px 20px 14px;
@@ -161,6 +161,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 0; }
   transition: background 0.18s ease;
 }
 .index-row:last-child { border-bottom: 1px solid var(--line); }
+.index-row.first { border-top: none; }
 .index-row:hover { background: var(--accent-bg); text-decoration: none; }
 .index-row::before {              /* accent tick on the left, hidden until hover */
   content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
@@ -192,7 +193,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 0; }
 
 @media (max-width: 760px) {
   .index-row {
-    grid-template-columns: 34px 1fr 70px;
+    grid-template-columns: 34px 1fr 64px;
     grid-template-areas: "num name year" "num meta meta";
     row-gap: 6px; padding: 18px 8px;
   }
@@ -200,10 +201,34 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 0; }
   .cell-num  { grid-area: num; }
   .cell-name { grid-area: name; }
   .cell-year { grid-area: year; }
-  .cell-place { grid-area: meta; }
-  .cell-role { display: none; }
+  .cell-role { grid-area: meta; font-size: 11.5px; }
   .cell-go { display: none; }
 }
+
+/* Place groups inside the index */
+.index-group {
+  display: flex; align-items: baseline; gap: 16px;
+  padding: 40px 8px 14px 14px; border-top: 1px solid var(--line-2);
+}
+.index-group:first-of-type { border-top: none; padding-top: 6px; }
+.index-group__name {
+  font-family: var(--font-display); font-weight: 500;
+  font-size: clamp(20px, 2.6vw, 27px); letter-spacing: -0.015em;
+}
+.index-group__note {
+  font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--ink-3);
+}
+.index-group__count { margin-left: auto; font-family: var(--font-mono); font-size: 12px; color: var(--ink-3); }
+@media (max-width: 760px){ .index-group__note { display: none; } }
+
+/* "Story to write" editorial note for projects still being filled in */
+.todo {
+  border: 1px dashed var(--line-2); border-left: 3px solid var(--accent);
+  background: var(--accent-bg); padding: 18px 20px;
+  font-family: var(--font-mono); font-size: 13px; line-height: 1.6; color: var(--ink-2);
+}
+.todo b { color: var(--accent); font-weight: 500; }
 
 /* =========================================================================
    ABOUT / CAPABILITIES
